@@ -608,7 +608,7 @@ class GatewayConnection(APNsConnection):
                                         self._apns_connection._response_listener(Util.convert_error_response_to_dict(error_response))
                                     _logger.info("got error-response from APNS:" + str(error_response))
                                     self._apns_connection._disconnect()
-                                    self._resend_notifications_by_id(identifier)
+                                    # self._resend_notifications_by_id(identifier)
                             if len(buff) == 0:
                                 _logger.warning("read socket got 0 bytes data") #DEBUG
                                 self._apns_connection._disconnect()
